@@ -370,10 +370,45 @@ blockquote {
 }
 
 img.nav-logo {
-    height: 52px;
+    height: 114px;
     width: auto;
-    max-height: 52px;
+    max-height: 114px;
     object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.navbar-brand:hover img.nav-logo {
+    transform: scale(1.08);
+    filter: drop-shadow(0 6px 18px rgba(170, 132, 83, 0.35));
+}
+
+.footer-brand-logo {
+    height: 110px;
+    width: auto;
+    max-height: 110px;
+    object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0 6px 20px rgba(170, 132, 83, 0.35));
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.footer-brand a:hover .footer-brand-logo,
+.footer-brand a:hover img {
+    transform: scale(1.07);
+    filter: drop-shadow(0 8px 26px rgba(170, 132, 83, 0.55));
+}
+
+@media (max-width: 991px) {
+    img.nav-logo {
+        height: 58px;
+        max-height: 58px;
+    }
+    .footer-brand-logo {
+        height: 82px;
+        max-height: 82px;
+    }
 }
 
 .entry-wrapper {
@@ -1185,10 +1220,10 @@ Header Style
     border-radius: 5px;
 }
 
-.main-nav{
+/* .main-nav{
     padding-top: 10px;
     padding-bottom: 10px;
-}
+} */
 
 .main-header .navbar .user-panel {
     display: flex;
