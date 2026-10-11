@@ -29,12 +29,32 @@
 
     <div id="page_wrapper" class="bg-light-gray">
         <!-- Header -->
-        <header class="main-header header-style-1 bg-white">
+        <header class="main-header header-style-1">
+            <div class="top-header">
+                <div class="container">
+                    <div class="row row-cols-md-2 row-cols-1 align-items-center">
+                        <div class="col">
+                            <ul class="list-element list-color-white d-flex justify-content-start gap-3">
+                                <li><a href="tel:+917235865131"><i class="fa fa-phone" aria-hidden="true"></i> Need Consultation? +91 7235865131</a></li>
+                                <li><a href="https://wa.me/917235865131?text=Hello%20Gorakhpur%20Home%20Decor" target="_blank" class="topbar-wa-link"><i class="fab fa-whatsapp text-success" aria-hidden="true"></i> WhatsApp</a></li>
+                                <li class="d-none d-lg-inline-block"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Taramandal, Gorakhpur</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="navbar-top list-element list-color-white d-flex justify-content-end gap-3">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="main-nav">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <nav class="navbar navbar-expand-lg nav-dark nav-active-primary nav-hover-primary nav-line-active">
+                            <nav class="navbar navbar-expand-lg nav-white nav-active-primary nav-hover-primary nav-line-active">
                                 <a class="navbar-brand d-inline-flex align-items-center" href="index.html">
                                     <img class="nav-logo" src="assets/images/final-logo.png" alt="Gorakhpur Home Decor">
                                 </a>
@@ -43,9 +63,15 @@
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav ms-auto">
-                                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="about.html">About Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="service.html">Service</a>
+                                        </li>
                                         <li class="nav-item dropdown active">
                                             <a class="nav-link dropdown-toggle" href="product.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Product</a>
                                             <ul class="dropdown-menu">
@@ -56,7 +82,9 @@
                                                 <li><a class="dropdown-item" href="aluminum-door-windows.html">Aluminum Door Windows</a></li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contact.html">Contact Us</a>
+                                        </li>
                                     </ul>
                                     <a href="https://wa.me/917235865131?text=Hello%20Gorakhpur%20Home%20Decor,%20I%20want%20a%20quote%20for%20PVC%20Panels" target="_blank" class="btn btn-primary btn-hover-secondary hover-flash-move ms-lg-3"><i class="fab fa-whatsapp me-1"></i> Get a Quote</a>
                                 </div>
@@ -279,10 +307,17 @@
         </footer>
         <!--=============== Awwwards-Inspired Luxury Footer End ===============-->
 
-        <!-- Floating WhatsApp Button -->
-        <a href="https://wa.me/917235865131?text=Hello%20Gorakhpur%20Home%20Decor,%20I%20have%20an%20inquiry" target="_blank" class="position-fixed shadow-lg d-flex align-items-center justify-content-center text-white text-decoration-none" style="bottom: 25px; right: 25px; width: 60px; height: 60px; border-radius: 50%; background-color: #25D366; z-index: 999; font-size: 32px;" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+                <!-- Left Floating Quick Action Toolbar (Call & WhatsApp) -->
+        <div class="floating-contact-toolbar" role="region" aria-label="Quick Contact Toolbar">
+            <a href="tel:+917235865131" class="floating-action-btn floating-btn-phone" title="Call Us: +91 7235865131" aria-label="Call Us: +91 7235865131">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="floating-tooltip">Call +91 7235865131</span>
+            </a>
+            <a href="https://wa.me/917235865131?text=Hello%20Gorakhpur%20Home%20Decor,%20I%20want%20a%20quote%20for%20PVC%20Panels" target="_blank" class="floating-action-btn floating-btn-whatsapp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <span class="floating-tooltip">Chat on WhatsApp</span>
+            </a>
+        </div>
     </div>
 
     <script src="assets/js/jquery.min.js"></script>

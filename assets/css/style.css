@@ -1266,12 +1266,27 @@ Header Style
     border: none;
 }
 
-.header-absolute {
+.main-header.header-style-1 {
+    background-color: #111319;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 999;
+}
+
+.main-header.header-style-1.header-absolute {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    background-color: transparent;
+    border-bottom: none;
     z-index: 100;
+}
+
+.top-header {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .header-style-3 {
@@ -8167,18 +8182,11 @@ Responsive Code
         display: none;
     }
 
-    .header-style-1 {
-        background-color: var(--uc-white-color);
-    }
-
-    .header-style-1.header-absolute {
-        position: static;
-        background-color: var(--uc-secondary-color);
-    }
-
+    .header-style-1,
+    .header-style-1.header-absolute,
     .header-style-3.header-absolute {
         position: static;
-        background: var(--uc-secondary-color);
+        background-color: #111319 !important;
         padding-bottom: 0;
     }
 
@@ -8208,13 +8216,6 @@ Responsive Code
         outline: none !important;
     }
 
-    .bg-white .navbar-toggler,
-    .header-style-1:not(.header-absolute) .navbar-toggler {
-        background: #f8fafc !important;
-        border: 1px solid rgba(0, 0, 0, 0.12) !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-
     .navbar-toggler:hover,
     .navbar-toggler:focus {
         box-shadow: 0 0 0 3px rgba(170, 132, 83, 0.25) !important;
@@ -8233,11 +8234,6 @@ Responsive Code
         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         margin: 0 !important;
         padding: 0 !important;
-    }
-
-    .bg-white .navbar-toggler-icon,
-    .header-style-1:not(.header-absolute) .navbar-toggler-icon {
-        background-color: #1a1a24 !important;
     }
 
     .navbar-toggler-icon::before,
@@ -8341,13 +8337,6 @@ Responsive Code
         -webkit-backdrop-filter: blur(16px);
     }
 
-    .bg-white .navbar-collapse,
-    .header-style-1:not(.header-absolute) .navbar-collapse {
-        background: #ffffff;
-        border: 1px solid rgba(170, 132, 83, 0.2);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-    }
-
     .navbar-collapse .navbar-nav {
         gap: 3px;
         margin-bottom: 16px;
@@ -8369,11 +8358,6 @@ Responsive Code
         transition: all 0.25s ease;
     }
 
-    .bg-white .navbar-collapse .navbar-nav .nav-link,
-    .header-style-1:not(.header-absolute) .navbar-collapse .navbar-nav .nav-link {
-        color: #1e2229 !important;
-    }
-
     .navbar-collapse .navbar-nav .nav-item.active > .nav-link,
     .navbar-collapse .navbar-nav .nav-link:hover {
         background: rgba(170, 132, 83, 0.12) !important;
@@ -8390,12 +8374,6 @@ Responsive Code
         margin: 4px 0 8px 10px !important;
     }
 
-    .bg-white .navbar-collapse .navbar-nav .dropdown-menu,
-    .header-style-1:not(.header-absolute) .navbar-collapse .navbar-nav .dropdown-menu {
-        background: #f8fafc !important;
-        border: 1px solid rgba(0, 0, 0, 0.06) !important;
-    }
-
     .navbar-collapse .navbar-nav .dropdown-menu.show,
     .navbar-collapse .navbar-nav .dropdown.visible .dropdown-menu {
         display: block !important;
@@ -8407,11 +8385,6 @@ Responsive Code
         color: rgba(255, 255, 255, 0.75) !important;
         border-radius: 6px;
         transition: all 0.2s ease;
-    }
-
-    .bg-white .navbar-collapse .navbar-nav .dropdown-item,
-    .header-style-1:not(.header-absolute) .navbar-collapse .navbar-nav .dropdown-item {
-        color: #374151 !important;
     }
 
     .navbar-collapse .navbar-nav .dropdown-item:hover,
@@ -8984,4 +8957,119 @@ Responsive Code
     .footer-cta-actions {
         margin-top: 20px;
     }
+}
+
+/* ========================================================
+   Floating Quick Action Contact Toolbar (Left Dock)
+   ======================================================== */
+.floating-contact-toolbar {
+    position: fixed;
+    bottom: 28px;
+    left: 24px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.floating-action-btn {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 22px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-action-btn:hover {
+    transform: translateY(-3px) scale(1.08);
+}
+
+.floating-btn-phone {
+    background: linear-gradient(135deg, #c59d5f 0%, #9c7333 100%);
+    box-shadow: 0 8px 22px rgba(197, 157, 95, 0.45);
+}
+
+.floating-btn-phone:hover {
+    box-shadow: 0 12px 28px rgba(197, 157, 95, 0.65);
+}
+
+.floating-btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+}
+
+.floating-btn-whatsapp:hover {
+    box-shadow: 0 12px 28px rgba(37, 211, 102, 0.65);
+}
+
+.floating-action-btn .floating-tooltip {
+    position: absolute;
+    left: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-6px);
+    background: #111319;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 24px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.floating-action-btn .floating-tooltip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    border-width: 5px 5px 5px 0;
+    border-style: solid;
+    border-color: transparent #111319 transparent transparent;
+}
+
+.floating-action-btn:hover .floating-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 768px) {
+    .floating-contact-toolbar {
+        bottom: 20px;
+        left: 16px;
+        gap: 10px;
+    }
+    .floating-action-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+    .floating-action-btn .floating-tooltip {
+        display: none;
+    }
+}
+
+.topbar-wa-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.topbar-wa-link:hover {
+    color: #25d366 !important;
 }
